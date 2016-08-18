@@ -158,6 +158,8 @@
 
         
 $("#button").click(function() {
-  goRight('.animate0', {{#each pokemon}}{{this.speed}}{{/each}})
+  {{#each pokemon}}
+  goRight('.animate{{this.position}}', {{this.moveSpeed}})
+  {{/each}}
 });
 </script>

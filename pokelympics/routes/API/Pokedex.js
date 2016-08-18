@@ -23,7 +23,8 @@ function getPokemon(cb) {
                     stats = {
                             position: i++,
                             name: p.name,
-                            speed: p.stats[0].base_stat,
+                            speed: parseInt(p.stats[0].base_stat),
+                            moveSpeed: Math.floor(1 / parseInt(p.stats[0].base_stat) * 100000),
                             fpic: p.sprites.front_default,
                             bpick: p.sprites.back_default,
                     }
