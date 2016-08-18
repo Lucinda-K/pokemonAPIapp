@@ -831,16 +831,16 @@ header {
 /** Footer **/
 footer.region,
 footer .block {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
 footer p {
   margin: 0;
+}
+
+#content-region {
+  padding-bottom: 107px;
 }
 
 

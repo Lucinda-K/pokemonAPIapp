@@ -96,7 +96,7 @@
             <div class="row">
             {{#each pokemon}}
               <a href="#/race/vote/{{this.name}}" title="Bet on {{this.name}}!">
-                <div class="col-md-3 col-xs-6 poketile">
+                <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-1 col-xs-6 col-xs-offset-0 poketile">
                   <img src="{{this.fpic}}" />
                   <p>Species: {{this.name}}</p>
                   <p>Speed: {{this.speed}}</p>
@@ -113,8 +113,8 @@
     </div> <!-- /container -->
   </div> <!-- /content-region -->
 
-  <footer class="region bg-color-grayDark1 text-color-light">
-    <div class="container no-padding no-margin">
+  <footer class="region bg-color-grayDark1 text-color-light navbar-fixed-bottom">
+    <div class="container">
 
       <div id="footer-1-block" class="footer-1 block">
 
