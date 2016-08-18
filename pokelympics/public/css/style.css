@@ -2966,3 +2966,37 @@ input[type="number"] {
   background: url('../img/background-images/rain.jpg') scroll center 0 no-repeat;
   background-size: cover;
 }
+
+#race {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.animate0 { 
+  position: relative;
+  width: 100px;
+  height: 100px;
+  
+  margin-top: 25px;
+}
+.animate1 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  
+  top: 25px;
+}
+.animate2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  
+  top: 25px;
+}
+.animate3 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  
+  top: 25px;
+}

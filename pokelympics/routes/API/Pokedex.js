@@ -15,11 +15,13 @@ function getPokemon(cb) {
 
     Q.allSettled(pok_prom)
         .then(function (results) {
-            var pok = []
+            var pok = [];
+            var i = 0;
             results.forEach(function (result) {
                 if (result.state === "fulfilled") {
                     p = result.value;
                     stats = {
+                            position: i++,
                             name: p.name,
                             speed: p.stats[0].base_stat,
                             fpic: p.sprites.front_default,

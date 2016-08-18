@@ -88,11 +88,6 @@
 
         <div class="row">
           <div class="text-center col-xs-12 col-md-offset-2 col-md-8">
-
-            <h2><b>Pokélympics</b></h2>
-
-            <hr />
-
             <h1>Pokéspecs</h1>
             <div class="row">
             {{#each pokemon}}
@@ -102,6 +97,14 @@
                 <p>Speed: {{this.speed}}</p>
               </div>
             {{/each}}
+            </div>
+            <button id="button" type="button">Race!</button>
+            <div class="row">
+                <div id="race">
+                {{#each pokemon}}
+                  <div class="animate{{this.position}}"><img id="plane" src="{{this.fpic}}" /></div>
+                {{/each}}
+                </div>
             </div>
 
           </div>
@@ -140,3 +143,4 @@
 <script src="js/jquery.placeholder.js"></script>
 <![endif]-->
 <script src="/js/app.js"></script>
+<script src="/js/race.js"></script>
