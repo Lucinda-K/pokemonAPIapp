@@ -1,0 +1,22 @@
+{
+  "name": "pokeathalon",
+  "version": "1.0.0",
+  "description": "Pokemon Olympic Simulation App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucinda-K/pokemonAPIapp.git"
+  },
+  "author": "Aaron, Barclay, Craig, Lucinda, Zak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucinda-K/pokemonAPIapp/issues"
+  },
+  "homepage": "https://github.com/Lucinda-K/pokemonAPIapp#readme",
+  "dependencies": {
+    "pokedex-promise-v2": "^3.0.1"
+  }
+}
