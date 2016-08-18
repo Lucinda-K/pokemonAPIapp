@@ -165,14 +165,23 @@
 <script>
   function goRight(object, speed) {
     $(object).animate({
-      left: "+=100%"
+      left: "+=25%"
     }, speed);
   }
 
 
 $("#button").click(function() {
   {{#each pokemon}}
-  goRight('.animate{{this.position}}', {{this.moveSpeed}})
+  goRight('.animate{{this.position}}', {{this.moveSpeed1}})
+  {{/each}}
+  {{#each pokemon}}
+  goRight('.animate{{this.position}}', {{this.moveSpeed2}})
+  {{/each}}
+  {{#each pokemon}}
+  goRight('.animate{{this.position}}', {{this.moveSpeed3}})
+  {{/each}}
+  {{#each pokemon}}
+  goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
 });
 </script>
