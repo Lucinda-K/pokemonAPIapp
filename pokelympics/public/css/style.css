@@ -99,6 +99,10 @@
 /*********************** General Styles **********************/
 /*************************************************************/
 
+.btn-primary {
+  background-color: #35AB16;
+}
+
 .poketile:hover {
   background-color: rgba(61, 146, 252, 0.70);
   -webkit-transition: background-color 200ms linear;
@@ -162,7 +166,7 @@ a:hover {
 
 #canvasRain {
   position:absolute;
-  width:2000px;
+  width:100%;
   height:120px;
 }
 #canvasRain2 {
