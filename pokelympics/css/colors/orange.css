@@ -1,0 +1,349 @@
+/**
+ * Bracara v1.0
+ * HTML5 & CSS3 Multipurpose Theme
+ * http://leaftree.pt/bracaraHTML
+ *
+ * leaftree 2013
+ * @leaftreeInc
+ * http://leaftree.pt
+ */
+ 
+/********************* TABLE OF CONTENTS *********************/
+/**                                                         **/
+/** General Styles                                          **/
+/** Typography                                              **/
+/** Menu                                                    **/
+/**  - Main Menu Theme1                                     **/
+/**  - Nav Pills                                            **/
+/** Highlighted image                                       **/
+/**  - Layout 1                                             **/
+/**  - Layout 2                                             **/
+/**  - Layout 3                                             **/
+/** Panels                                                  **/
+/**  - Panels Version 1                                     **/
+/** Our Work                                                **/
+/** Blog                                                    **/
+/**  - Blog Single                                          **/
+/** Latest Posts                                            **/
+/** Services                                                **/
+/**  - Services Version 1                                   **/
+/**  - Services Version 2                                   **/
+/** Testimonials                                            **/
+/** Sliders                                                 **/
+/**  - Highlighted Slider 1                                 **/
+/** Progress Bars                                           **/
+/** Buttons                                                 **/
+/** Labels                                                  **/
+/** Tabs                                                    **/
+/** Accordions                                              **/
+/** Pagination                                              **/
+/** Pricing tables                                          **/
+/**  - Layout 1                                             **/
+/** Colors & Backgrounds                                    **/
+/**  - Text Colors                                          **/
+/**  - Background Colors                                    **/
+/**                                                         **/
+/*************************************************************/
+
+
+
+/*************************************************************/
+/*********************** General Styles **********************/
+/*************************************************************/
+
+a {
+  color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************ Typography *************************/
+/*************************************************************/
+
+blockquote {
+  border-left: 1px solid #f1915e;
+}
+
+blockquote.pull-right {
+  border-right: 1px solid #f1915e;
+}
+
+
+
+/*************************************************************/
+/**************************** Menu ***************************/
+/*************************************************************/
+
+/** Main Menu Theme1 **/
+.main-menu-theme1 .active > a,
+.main-menu-theme1 .nav .open > a,
+.main-menu-theme1 .nav .open > a:hover,
+.main-menu-theme1 .nav .open > a:focus,
+.main-menu-theme1 .nav > li > a:hover,
+.main-menu-theme1 .nav > li > a:focus,
+.main-menu-theme1 .nav > li:hover > a,
+.main-menu-theme1 .nav > li:focus > a {
+  background-color: #f1915e;
+}
+
+.main-menu-theme1 .dropdown-menu > .active > a,
+.main-menu-theme1 .dropdown-menu > li > a:hover,
+.main-menu-theme1 .dropdown-menu > li > a:focus {
+  color: #f1915e;
+}
+
+@media (max-width: 767px) {
+  
+  .main-menu-theme1 .navbar-toggle {
+    border: 1px solid #f1915e;
+    background: #f1915e;
+  }
+  
+}
+
+/** Nav Pills **/
+.nav-pills > li > a:hover,
+.nav-pills > li > a:focus,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/********************* Highlighted Image *********************/
+/*************************************************************/
+
+/** Layout 1 **/
+.highlighted-image-1 .highlighted-image-content {
+  background: #f1915e; /* IE 8 */
+  background: rgba(241, 145, 94, 0.7); /* Extraordinary browsers will catch this */
+}
+
+@media (max-width: 767px) {
+
+	.highlighted-image-1 .highlighted-image-content {
+  	background: #f1915e;
+	}
+	
+}
+
+/** Layout 2 **/
+.highlighted-image-2 .highlighted-image-headline {
+  background: #f1915e; /* IE 8 */
+  background: rgba(241, 145, 94, 0.75);
+}
+
+/** Layout 2 **/
+.highlighted-image-3 .highlighted-image-headline {
+  background: #f1915e; /* IE 8 */
+  background: rgba(241, 145, 94, 0.75);
+}
+
+
+
+/*************************************************************/
+/*************************** Panels **************************/
+/*************************************************************/
+
+/** Panels Version 1 **/
+.panel-1-icon .active,
+.panel-1-icon i:hover,
+.panel-1-icon i:focus,
+.panel-1-icon i:active {
+  color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************** Our Work *************************/
+/*************************************************************/
+
+.our-work-item figure figcaption {
+  background: rgb(241, 145, 94);
+  background: rgba(241, 145, 94, 0.8);
+}
+
+
+
+/*************************************************************/
+/*************************** Blog ****************************/
+/*************************************************************/
+
+/** Blog Single **/
+.blog-single-post-info .date {
+  color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************ Latest Posts ***********************/
+/*************************************************************/
+
+.latest-posts-item-date {
+  background: #f1915e;
+}
+
+@media (max-width: 767px) {
+  
+  .latest-posts-item-date {
+    color: #f1915e;
+  }
+  
+}
+
+
+
+/*************************************************************/
+/************************** Services *************************/
+/*************************************************************/
+
+/** Services Version 1 **/
+.services-1-item-description h2 {
+  color: #f1915e;
+}
+
+/** Services Version 2 **/
+.services-2-item-description h3 {
+  color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************ Testimonials ***********************/
+/*************************************************************/
+
+.testimonials-author h6 {
+  color: #f1915e;
+}
+
+
+/*************************************************************/
+/************************** Sliders **************************/
+/*************************************************************/
+
+/** Highlighted Slider 1 **/
+.highlighted-slider-1-caption {
+  background: #f1915e; /* IE 8 */
+  background: rgba(241, 145, 94, 0.7); /* Extraordinary browsers will catch this */
+}
+
+
+
+/*************************************************************/
+/*********************** Progress Bars ***********************/
+/*************************************************************/
+
+.progress-bar-primary {
+  background-color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************** Buttons **************************/
+/*************************************************************/
+
+.btn-default {
+  color: #f1915e;
+  border: 2px solid #f1915e;
+}
+
+.btn-primary {
+  background-color: #f1915e;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active,
+.open .dropdown-toggle.btn-light {
+  color: #f1915e!important;
+}
+
+
+
+/*************************************************************/
+/*************************** Labels **************************/
+/*************************************************************/
+
+.label-primary {
+  background-color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/**************************** Tabs ***************************/
+/*************************************************************/
+
+.nav-tabs > li > a {
+  background: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************* Accordions ************************/
+/*************************************************************/
+
+.panel-primary > .panel-heading {
+  background-color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/************************* Pagination ************************/
+/*************************************************************/
+
+.pagination > li > a,
+.pagination > li > span {
+  color: #f1915e;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus,
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #f1915e;
+}
+
+
+
+/*************************************************************/
+/*********************** Pricing tables **********************/
+/*************************************************************/
+
+/** Layout 1 **/
+.pricing-tables-1 .pricing-table-promotional .pricing-table-title {
+  color: #f1915e;
+}
+
+.pricing-tables-1 .pricing-table-promotional .pricing-table-price {
+  background: #f1915e;
+}
+
+
+
+/*************************************************************/
+/******************** Colors & Backgrounds *******************/
+/*************************************************************/
+
+/** Text Colors **/
+.text-color-theme      { color: #f1915e; }
+
+/** Background Colors **/
+.bg-color-theme        { background-color: #f1915e; }
