@@ -100,13 +100,26 @@
 /*************************************************************/
 
 .poketile:hover {
-  background-color: rgba(61, 146, 252, 0.76);
+  background-color: rgba(61, 146, 252, 0.70);
   -webkit-transition: background-color 200ms linear;
   -moz-transition: background-color 200ms linear;
   -o-transition: background-color 200ms linear;
   -ms-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   cursor:url(/img/pokeball.png), auto !important;
+}
+
+.poketile-selected {
+  background-color: rgba(61, 146, 252, 0.85) !important;
+  color: #FFF !important;
+  border-radius: 10px;
+  padding: 0 0 15px 0;
+  margin-bottom: 15px;
+  -webkit-transition: background-color 200ms linear;
+  -moz-transition: background-color 200ms linear;
+  -o-transition: background-color 200ms linear;
+  -ms-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
 }
 
 .poketile {
