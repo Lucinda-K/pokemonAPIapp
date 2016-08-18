@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
     for (var i = 0; i < pok.length; i++) {
       pok[i].name = pokedex.toTitleCase(pok[i].name);
     }
-    res.render('index', { pokemon: pok, title: 'Pokélympics2' });
+    res.render('index', { pokemon: pok, title: 'Pokélympics' });
     //pokedex.toTitleCase(pok[0].name), pokeSpeed: pok[0].speed, pokeFrontPicURL: pok[0].fpic
   });
 

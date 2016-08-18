@@ -16,9 +16,9 @@
         ctx.drawImage (fallingDrops[i].image, fallingDrops[i].x, fallingDrops[i].y); // The rain drop
 
         fallingDrops[i].y += fallingDrops[i].speed; // Set the falling speed
-        if (fallingDrops[i].y > 450) {  // Repeat the raindrop when it falls out of view
+        if (fallingDrops[i].y > 240) {  // Repeat the raindrop when it falls out of view
           fallingDrops[i].y = -25 // Account for the image size
-          fallingDrops[i].x = Math.random() * 600;    // Make it appear randomly along the width
+          fallingDrops[i].x = Math.random() * 2000;    // Make it appear randomly along the width
         }
       }
     }
@@ -35,7 +35,7 @@
           fallingDr["image"] =  new Image();
           fallingDr.image.src = '/img/pokeball.png';
 
-          fallingDr["x"] = Math.random() * 600;
+          fallingDr["x"] = Math.random() * 2000;
           fallingDr["y"] = Math.random() * 5;
           fallingDr["speed"] = 3 + Math.random() * 5;
           fallingDrops.push(fallingDr);
@@ -89,18 +89,19 @@
         <div class="row">
           <div class="text-center col-xs-12 col-md-offset-2 col-md-8">
 
-            <h2><b>Pokélympics</b></h2>
+            <h1>Choose your Pok&eacute;mon!</h1>
 
             <hr />
 
-            <h1>Pokéspecs</h1>
             <div class="row">
             {{#each pokemon}}
-              <div class="col-md-3 col-xs-6">
-                <img src="{{this.fpic}}" />
-                <p>Species: {{this.name}}</p>
-                <p>Speed: {{this.speed}}</p>
-              </div>
+              <a href="#/race/vote/{{this.name}}" title="Bet on {{this.name}}!">
+                <div class="col-md-3 col-xs-6 poketile">
+                  <img src="{{this.fpic}}" />
+                  <p>Species: {{this.name}}</p>
+                  <p>Speed: {{this.speed}}</p>
+                </div>
+              </a>
             {{/each}}
             </div>
 
