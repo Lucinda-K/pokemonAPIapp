@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/Lucinda-K/pokemonAPIapp#readme",
   "dependencies": {
+    "express": "~4.13.4",
+    "angular": "^1.5.8",
+    "angular-ui-bootstrap": "^2.0.2",
     "pokedex-promise-v2": "^3.0.1"
   }
 }
