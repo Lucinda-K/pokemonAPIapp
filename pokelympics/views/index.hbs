@@ -149,4 +149,15 @@
 <script src="js/jquery.placeholder.js"></script>
 <![endif]-->
 <script src="/js/app.js"></script>
-<script src="/js/race.js"></script>
+<script>
+  function goRight(object, speed) {
+    $(object).animate({
+      left: "+=100%"
+    }, speed);
+  }
+
+        
+$("#button").click(function() {
+  goRight('.animate0', {{#each pokemon}}{{this.speed}}{{/each}})
+});
+</script>

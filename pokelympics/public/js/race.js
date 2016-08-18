@@ -1,6 +1,6 @@
 function goRight(object, speed) {
   $(object).animate({
-    right: 1
+    left: "+=100%"
   }, speed);
 }
 
