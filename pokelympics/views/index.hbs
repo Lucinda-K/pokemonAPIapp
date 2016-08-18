@@ -47,6 +47,17 @@
     setup();
   </script>
 
+  <script>
+    var hasBeenSelected = false;
+    function selectThis(elem) {
+      if(!hasBeenSelected) {
+        elem.classList.add('poketile-selected');
+        hasBeenSelected = true;
+        document.getElementById("button").disabled = false;
+      }
+    }
+  </script>
+
   <header class="bg-color-grayDark1 text-color-light">
     <div class="container">
       <div class="row">
@@ -96,7 +107,7 @@
             <div class="row">
             {{#each pokemon}}
               <a href="#/race/vote/{{this.name}}" title="Bet on {{this.name}}!">
-                <div class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-1 col-xs-6 col-xs-offset-0 poketile">
+                <div id="tile-{{this.name}}" class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-1 col-xs-6 col-xs-offset-0 poketile" onclick="selectThis(this)">
                   <img src="{{this.fpic}}" />
                   <p>Species: {{this.name}}</p>
                   <p>Speed: {{this.speed}}</p>
@@ -104,15 +115,15 @@
               </a>
             {{/each}}
             </div>
-            <button id="button" type="button">Race!</button>
-            <div class="row">
-                <div id="race">
-                {{#each pokemon}}
-                  <div class="animate{{this.position}}"><img id="plane" src="{{this.fpic}}" /></div>
-                {{/each}}
-                </div>
-            </div>
+            <button id="button" type="button" class="btn btn-lg" disabled>Race!</button>
+          </div>
+        </div>
 
+        <div class="row">
+          <div id="race">
+          {{#each pokemon}}
+            <div class="animate{{this.position}}"><img id="plane" src="{{this.fpic}}" /></div>
+          {{/each}}
           </div>
         </div>
 
@@ -156,7 +167,7 @@
     }, speed);
   }
 
-        
+
 $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed1}})
