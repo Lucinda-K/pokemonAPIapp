@@ -1,2 +1,87 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="mainWrapper">
+
+  <header class="bg-color-grayDark1 text-color-light">
+    <div class="container">
+      <div class="row">
+
+        <div id="logo-region" class="col-md-3">
+          <h3 class="logo-text">{{title}}</h3>
+        </div> <!-- /logo-region -->
+
+        <div id="menu-region" class="col-md-9">
+          <nav class="navbar main-menu-theme1" role="navigation">
+            <!-- Menu button for mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">MENU</button>
+            </div>
+
+            <!-- Navigation links -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+              <ul class="nav navbar-right navbar-nav">
+                <li class="active"><a href="#/">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Games</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#/race">Relay Race</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div> <!-- /navbar-collapse -->
+          </nav>
+        </div> <!-- /menu-region -->
+
+      </div> <!-- /row -->
+    </div> <!-- /container -->
+  </header>
+
+  <div id="content-region" class="region">
+    <div class="container">
+
+      <div id="main-content-block">
+
+        <div class="row">
+          <div class="text-center col-xs-12 col-md-offset-2 col-md-8">
+
+            <h2><b>Pokélympics</b></h2>
+            <label>Name:</label>
+            <input type = "text" ng-model = "yourName" placeholder = "Enter a name here">
+            <hr />
+
+            <h1>Hello {{yourName}}!</h1>
+
+          </div>
+        </div>
+
+      </div> <!-- /main-content-block -->
+
+    </div> <!-- /container -->
+  </div> <!-- /content-region -->
+
+  <footer class="region bg-color-grayDark1 text-color-light">
+    <div class="container no-padding no-margin">
+
+      <div id="footer-1-block" class="footer-1 block">
+
+        <div class="row">
+
+          <div class="footer-author text-center col-xs-12">
+            <p>Copyright &copy; 2016</p>
+          </div> <!-- /footer-content -->
+
+        </div> <!-- /row -->
+
+      </div> <!-- /footer-1-block -->
+
+    </div> <!-- /container -->
+  </footer> <!-- /footer -->
+
+</div> <!-- /mainWrapper -->
+
+<!-- jQuery 1.10.2 -->
+<script src="/js/jquery-1.10.2.min.js"></script>
+<!-- jQuery Plugins -->
+<script src="/js/bootstrap.min.js"></script>
+<!--[if lte IE 9]>
+<script src="js/jquery.placeholder.js"></script>
+<![endif]-->
+<script src="/js/app.js"></script>
