@@ -21,6 +21,7 @@ function getPokemon(cb) {
                             bpick: p.sprites.back_default,
                     }
                     pok.push(stats);
+                    console.log("test");
                 } else {
                     var reason = result.reason;
                     console.log(reason);

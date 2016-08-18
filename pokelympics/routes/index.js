@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+
 router.get('/pok', function(req, res, next) {
   pokedex(function(pok) {
     res.json(pok);
