@@ -54,7 +54,7 @@ function getPokemon(cb) {
                     }
                     console.log("stats set");
                     pok.push(stats);
-                    console.log(stats);
+                    //console.log(stats);
                     console.log("...successful fetch!");
                 } else {
                     var reason = result.reason;
