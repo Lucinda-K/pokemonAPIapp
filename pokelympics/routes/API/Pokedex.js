@@ -2,9 +2,14 @@ var Pokedex = require('pokedex-promise-v2');
 var Q = require('q');
 var P = new Pokedex();
 
+function toTitleCase(str) {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
+
 function getPokemon(cb) {
+    console.log("Fetching Pokémon data...");
     pok_prom = [];
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 4; i++) {
         pok_prom.push(P.getPokemonByName(Math.floor((Math.random() * 100) + 1)));
     }
 
@@ -21,7 +26,8 @@ function getPokemon(cb) {
                             bpick: p.sprites.back_default,
                     }
                     pok.push(stats);
-                    console.log("test");
+                    console.log(stats);
+                    console.log("...successful fetch!");
                 } else {
                     var reason = result.reason;
                     console.log(reason);
@@ -31,4 +37,4 @@ function getPokemon(cb) {
         });
 }
 
-module.exports = getPokemon;
+module.exports = {getPokemon:getPokemon, toTitleCase:toTitleCase};

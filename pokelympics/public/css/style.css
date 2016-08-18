@@ -99,6 +99,12 @@
 /*********************** General Styles **********************/
 /*************************************************************/
 
+#canvasRain {
+  position:absolute;
+  width:600;
+  height:240;
+}
+
 body {
   font-size: 1.8em;
   line-height: 1.5em;
@@ -107,6 +113,7 @@ body {
   text-rendering: optimizeLegibility;
   letter-spacing: 1px;
   color: #555;
+  cursor:url(/img/pokeball.png), auto !important;
 }
 
 a {
@@ -1179,7 +1186,7 @@ footer p {
 }
 
 .panel-1-icon i:hover {
-  cursor: pointer;
+  cursor:url(/img/pokeball.png), auto !important
 }
 
 .panel-1-content {
@@ -1383,7 +1390,7 @@ footer p {
   width: 325px;
   height: 325px;
   margin: auto;
-  cursor: pointer;
+  cursor:url(/img/pokeball.png), auto !important
 }
 
 .our-work-item figure img {
@@ -1422,7 +1429,7 @@ footer p {
 	    -ms-transform: translateY(0%);
 	     -o-transform: translateY(0%);
 	        transform: translateY(0%);
-  cursor: pointer;
+  cursor:url(/img/pokeball.png), auto !important
 }
 
 .our-work-item figure figcaption h6 {
@@ -1482,7 +1489,7 @@ footer p {
   	    -ms-transform: translateY(0%);
   	     -o-transform: translateY(0%);
   	        transform: translateY(0%);
-  	cursor: pointer;
+  	cursor:url(/img/pokeball.png), auto !important
   }
 
   .our-work-item figure figcaption h6 {
@@ -2774,7 +2781,7 @@ input[type="number"] {
 }
 
 .switcher a.link {
-  cursor: pointer;
+  cursor:url(/img/pokeball.png), auto !important
   color: #f0f0f0;
   font-size: 1.1em;
   text-align: center;
