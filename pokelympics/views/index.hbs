@@ -54,6 +54,8 @@
         elem.classList.add('poketile-selected');
         hasBeenSelected = true;
         document.getElementById("button").disabled = false;
+        var $target = $('html,body');
+        $target.animate({scrollTop: $target.height()}, 1000);
       }
     }
   </script>
@@ -115,7 +117,7 @@
               </a>
             {{/each}}
             </div>
-            <button id="button" type="button" class="btn btn-lg" disabled>Race!</button>
+            <button id="button" type="button" class="btn btn-lg btn-primary" disabled>Race!</button>
           </div>
         </div>
 
