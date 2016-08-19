@@ -198,8 +198,9 @@ $("#button").click(function() {
   {{/each}}
   var button = document.getElementById('button')
   button.disabled = true;
-
-
+  button.id = "reset";
+  
+  
   setTimeout(function() {
 
   console.log("Winner Delay");
@@ -226,14 +227,11 @@ $("#button").click(function() {
 
       button.innerHTML = "New Race";
       button.disabled = false;
-      button.id = "reset";
+      
+      button.onclick = function() {location.reload();}
 
   }, {{winnerDelay}});
 
-});
-
-$("#reset").click(function(){
-  location.reload();
 });
 </script>
 
