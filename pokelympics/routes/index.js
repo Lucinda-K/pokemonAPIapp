@@ -31,8 +31,9 @@ router.get('/', function(req, res, next) {
       }
     }
     console.log(pok[winner].name);
+    var winName = pok[winner].name;
 
-    res.render('index', { pokemon: pok, title: 'Pokélympics', winnerDelay: winDel });
+    res.render('index', { pokemon: pok, title: 'Pokélympics', winnerDelay: winDel, winnerName: winName });
     //pokedex.toTitleCase(pok[0].name), pokeSpeed: pok[0].speed, pokeFrontPicURL: pok[0].fpic
   });
 });
