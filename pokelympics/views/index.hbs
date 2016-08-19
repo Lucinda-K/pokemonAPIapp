@@ -57,6 +57,33 @@
         var $target = $('html,body');
         $target.animate({scrollTop: $target.height()}, 1000);
       }
+
+      $("#button").click(function() {
+        // Stop existing audio track(s)
+        $('audio').each(function(){
+          this.pause(); // Stop playing
+          this.currentTime = 0; // Reset time
+        });
+
+        // Start race music
+        document.getElementById('race_music').play();
+
+        if(race_ended) {
+          // Stop existing audio track(s)
+          $('audio').each(function(){
+            this.pause(); // Stop playing
+            this.currentTime = 0; // Reset time
+          });
+
+          if(race_won) {
+            // Play victory music
+            document.getElementById('race_win_music').play();
+          } else {
+            // Play loss music
+            document.getElementById('race_loss_music').play();
+          }
+        }
+      });
     }
   </script>
 
@@ -93,6 +120,20 @@
       </div> <!-- /row -->
     </div> <!-- /container -->
   </header>
+
+  <!-- Poké Music! -->
+  <audio loop="loop" autoplay="autoplay" id="poke_chooser_music">
+    <source src="/music/choose_pokemon.mp3" type="audio/mpeg" />
+  </audio>
+  <audio loop="loop" id="race_music">
+    <source src="/music/race_begins.m4a" type="audio/mpeg" />
+  </audio>
+  <audio loop="loop" id="race_win_music">
+    <source src="/music/race_win.m4a" type="audio/mpeg" />
+  </audio>
+  <audio loop="loop" id="race_loss_music">
+    <source src="/music/race_loss.m4a" type="audio/mpeg" />
+  </audio>
 
   <div id="content-region" class="region">
     <div class="container">
