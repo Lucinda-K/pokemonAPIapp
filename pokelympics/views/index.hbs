@@ -114,8 +114,7 @@
               <a href="#/race/vote/{{this.name}}" title="Bet on {{this.name}}!">
                 <div id="tile-{{this.name}}" class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-1 col-xs-6 col-xs-offset-0 poketile" onclick="selectThis(this)">
                   <img src="{{this.fpic}}" />
-                  <p>Species: {{this.name}}</p>
-                  <p>Speed: {{this.speed}}</p>
+                  <h3>{{this.name}}</h3>
                 </div>
               </a>
             {{/each}}
@@ -132,7 +131,20 @@
           {{/each}}
           </div>
         </div>
-
+        <!-- Modal -->
+        <div class="modal fade" id="raceEndModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Race results</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div> <!-- /main-content-block -->
 
@@ -173,6 +185,8 @@
 <script src="/js/textillate.js"></script>
 <!-- textillate css -->
 <link href="/stylesheets/textillate.css" rel="stylesheet" />
+<!-- animate.css -->
+<link href="/stylesheets/animate.min.css" rel="stylesheet" />
 <script>
   function goRight(object, speed) {
     $(object).animate({
@@ -197,8 +211,8 @@ $("#button").click(function() {
   var button = document.getElementById('button')
   button.disabled = true;
   button.id = "reset";
-  
-  
+
+
   setTimeout(function() {
 
   console.log("Winner Delay");
@@ -217,18 +231,26 @@ $("#button").click(function() {
       // Player chose correctly; play victory music
       console.log("Player won!");
       document.getElementById('race_win_music').play();
+      var mymodal = $('#raceEndModal');
+      mymodal.find('.modal-body').text('You won! You chose wisely.');
+      mymodal.modal('show');
     } else {
       // Player lost :( – play loss music
       console.log("Player lost.");
       document.getElementById('race_loss_music').play();
+      var mymodal = $('#raceEndModal');
+      mymodal.find('.modal-body').text('You lost! Choose better next time.');
+      mymodal.modal('show');
     }
 
       button.innerHTML = "New Race";
       button.disabled = false;
-      
+
       button.onclick = function() {location.reload();}
 
-  }, {{winnerDelay}});
+      console.log("loser delay:  " + {{loserDelay}});
+
+  }, {{loserDelay}});
 
 });
 </script>

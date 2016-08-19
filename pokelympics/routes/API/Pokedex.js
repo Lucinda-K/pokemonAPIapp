@@ -29,10 +29,10 @@ function getPokemon(cb) {
                     var rand3 = (Math.random() * .5) - .25;
                     var rand4 = (Math.random() * .5) - .25;
                     console.log("random done");
-                    var s1 = Math.floor((1 / baseSpeed) * 100000);
-                    var s2 = Math.floor((1 / baseSpeed) * 100000);
-                    var s3 = Math.floor((1 / baseSpeed) * 100000);
-                    var s4 = Math.floor((1 / baseSpeed) * 100000);
+                    var s1 = Math.floor(Math.log(((1 / baseSpeed)) * 100000)*500);
+                    var s2 = Math.floor(Math.log(((1 / baseSpeed)) * 100000)*500);
+                    var s3 = Math.floor(Math.log(((1 / baseSpeed)) * 100000)*500);
+                    var s4 = Math.floor(Math.log(((1 / baseSpeed)) * 100000)*500);
                     console.log("speeds set");
 
                     var mSpeed1 = Math.floor(s1 + (s1 * rand1));
