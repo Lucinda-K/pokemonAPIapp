@@ -3066,7 +3066,7 @@ input[type="number"] {
   margin-top: -10px;
 }
 
-#button {
+#button, #reset {
   margin-bottom: 15px;
 }
 
