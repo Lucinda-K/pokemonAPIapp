@@ -41,6 +41,9 @@ function getPokemon(cb) {
                     var mSpeed4 = Math.floor(s1 + (s1 * rand4));
                     console.log("speeds saved");
 
+                    var tTime = mSpeed1 + mSpeed2 + mSpeed3 + mSpeed4;
+                    console.log(tTime);
+
                     stats = {
                             position: i++,
                             name: p.name,
@@ -49,9 +52,9 @@ function getPokemon(cb) {
                             moveSpeed2: mSpeed2,
                             moveSpeed3: mSpeed3,
                             moveSpeed4: mSpeed4,
+                            totalTime: tTime,
                             fpic: p.sprites.front_default,
-                            bpick: p.sprites.back_default,
-                            isWinner: 0
+                            bpic: p.sprites.back_default,
                     }
                     console.log("stats set");
                     pok.push(stats);

@@ -3072,27 +3072,27 @@ input[type="number"] {
   position: relative;
   width: 100px;
   height: 100px;
-
+  transform: scaleX(-1);
   margin-top: 25px;
 }
 .animate1 {
   position: relative;
   width: 100px;
   height: 100px;
-
+  transform: scaleX(-1);
   top: 25px;
 }
 .animate2 {
   position: relative;
   width: 100px;
   height: 100px;
-
+  transform: scaleX(-1);
   top: 25px;
 }
 .animate3 {
   position: relative;
   width: 100px;
   height: 100px;
-
+  transform: scaleX(-1);
   top: 25px;
 }
