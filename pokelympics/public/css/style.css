@@ -126,6 +126,10 @@
   transition: background-color 200ms linear;
 }
 
+a .poketile-selected {
+  color: #FFF !important;
+}
+
 .poketile {
   background-color: rgba(61, 146, 252, 0);
   border-radius: 10px;
