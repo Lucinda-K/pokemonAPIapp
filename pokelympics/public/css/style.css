@@ -3062,10 +3062,32 @@ input[type="number"] {
   background-size: cover;
 }
 
+.up-one-pixel {
+  margin-top: -10px;
+}
+
+#button {
+  margin-bottom: 15px;
+}
+
 #race {
   width: 100%;
-  border-right: 1px solid black;
+  border-right: 0 solid black;
   margin-bottom: 50px;
+  background-image: url('/img/racetrack_sideways_small.jpg');
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+#finish-line {
+  right: 0;
+  height: 425px;
+  width: auto;
+  float:right;
+}
+
+#pokeracers {
+  padding-top: 1px;
 }
 
 .animate0 {

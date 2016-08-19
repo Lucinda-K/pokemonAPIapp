@@ -147,9 +147,10 @@
         </div>
 
         <div id="race" class="row" style="display: none">
-          <div id="">
+          <div id="pokeracers">
+            <img src="/img/finish_line.jpg" id="finish-line" alt="Finish Line" />
           {{#each pokemon}}
-            <div class="animate{{this.position}}"><img id="plane" src="{{this.fpic}}" /></div>
+            <div class="animate{{this.position}} up-one-pixel"><img id="plane" src="{{this.fpic}}" /></div>
           {{/each}}
           </div>
         </div>
