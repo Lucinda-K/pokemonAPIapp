@@ -132,7 +132,20 @@
           {{/each}}
           </div>
         </div>
-
+        <!-- Modal -->
+        <div class="modal fade" id="raceEndModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Race results</h4>
+              </div>
+              <div class="modal-body">
+                ...
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div> <!-- /main-content-block -->
 
@@ -199,8 +212,8 @@ $("#button").click(function() {
   var button = document.getElementById('button')
   button.disabled = true;
   button.id = "reset";
-  
-  
+
+
   setTimeout(function() {
 
   console.log("Winner Delay");
@@ -219,15 +232,21 @@ $("#button").click(function() {
       // Player chose correctly; play victory music
       console.log("Player won!");
       document.getElementById('race_win_music').play();
+      var mymodal = $('#raceEndModal');
+      mymodal.find('.modal-body').text('You won! :\)');
+      mymodal.modal('show');
     } else {
       // Player lost :( – play loss music
       console.log("Player lost.");
       document.getElementById('race_loss_music').play();
+      var mymodal = $('#raceEndModal');
+      mymodal.find('.modal-body').text('You lost! :\(');
+      mymodal.modal('show');
     }
 
       button.innerHTML = "New Race";
       button.disabled = false;
-      
+
       button.onclick = function() {location.reload();}
 
   }, {{winnerDelay}});
