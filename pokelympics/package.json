@@ -16,6 +16,7 @@
     "morgan": "~1.7.0",
     "pokedex-promise-v2": "^3.0.1",
     "q": "^1.4.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "start": "^4.0.1"
   }
 }
