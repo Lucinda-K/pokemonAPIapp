@@ -79,28 +79,6 @@
           <h3 class="logo-text">{{title}}</h3>
         </div> <!-- /logo-region -->
 
-        <div id="menu-region" class="col-md-9">
-          <nav class="navbar main-menu-theme1" role="navigation">
-            <!-- Menu button for mobile display -->
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">MENU</button>
-            </div>
-
-            <!-- Navigation links -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-              <ul class="nav navbar-right navbar-nav">
-                <li class="active"><a href="#/">Home</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Games</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#/race">Relay Race{{test}}</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div> <!-- /navbar-collapse -->
-          </nav>
-        </div> <!-- /menu-region -->
-
       </div> <!-- /row -->
     </div> <!-- /container -->
   </header>
@@ -218,8 +196,8 @@ $("#button").click(function() {
   {{/each}}
   var button = document.getElementById('button')
   button.disabled = true;
-  
-  
+
+
   setTimeout(function() {
 
   console.log("Winner Delay");
