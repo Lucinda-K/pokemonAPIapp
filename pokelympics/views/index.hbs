@@ -209,8 +209,11 @@ $("#button").click(function() {
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
   var button = document.getElementById('button')
-  button.disabled = true;
-  button.id = "reset";
+  if (button != null) {
+    button.disabled = true;
+    button.id = "reset";
+  }
+  
 
 
   setTimeout(function() {
