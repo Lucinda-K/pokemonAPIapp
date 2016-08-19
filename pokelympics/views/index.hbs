@@ -233,14 +233,14 @@ $("#button").click(function() {
       console.log("Player won!");
       document.getElementById('race_win_music').play();
       var mymodal = $('#raceEndModal');
-      mymodal.find('.modal-body').text('You won! :\)');
+      mymodal.find('.modal-body').text('You won! You chose wisely.');
       mymodal.modal('show');
     } else {
       // Player lost :( – play loss music
       console.log("Player lost.");
       document.getElementById('race_loss_music').play();
       var mymodal = $('#raceEndModal');
-      mymodal.find('.modal-body').text('You lost! :\(');
+      mymodal.find('.modal-body').text('You lost! Choose better next time.');
       mymodal.modal('show');
     }
 
@@ -251,7 +251,7 @@ $("#button").click(function() {
 
       console.log("loser delay:  " + {{loserDelay}});
 
-  }, {{winnerDelay}});
+  }, {{loserDelay}});
 
 });
 </script>
