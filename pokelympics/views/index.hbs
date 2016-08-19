@@ -225,7 +225,10 @@ $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
-  console.log()
+  
+  setTimeout(function() {
+    console.log("Winner Delay");
+  }, {{winnerDelay}});
 });
 </script>
 
