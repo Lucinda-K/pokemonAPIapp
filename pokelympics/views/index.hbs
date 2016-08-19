@@ -163,6 +163,12 @@
 <script src="js/jquery.placeholder.js"></script>
 <![endif]-->
 <script src="/js/app.js"></script>
+<!-- jquery lettering -->
+<script src="/js/jquery.lettering-0.6.1.min.js"></script>
+<!-- textillate js -->
+<script src="/js/textillate.js"></script>
+<!-- textillate css -->
+<link href="/stylesheets/textillate.css" rel="stylesheet" />
 <script>
   function goRight(object, speed) {
     $(object).animate({
@@ -192,4 +198,11 @@ $("#button").click(function() {
     document.getElementById("race").style.display = "block";
     console.log("let's race");
   });
+</script>
+<script>
+$('.textillate').textillate({
+  in: { effect: 'splat' },
+  out: { effect: 'foldUnfold', sync: true },
+  loop: true
+});
 </script>
