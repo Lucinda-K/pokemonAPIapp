@@ -139,7 +139,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Race results</h4>
               </div>
-              <div class="modal-body">
+              <div class="modal-body textillate">
                 ...
               </div>
             </div>
@@ -237,6 +237,11 @@ $("#button").click(function() {
       var mymodal = $('#raceEndModal');
       mymodal.find('.modal-body').text('You won! You chose wisely.');
       mymodal.modal('show');
+      $('.textillate').textillate({
+        in: { effect: 'shake' },
+        out: { effect: 'flipOutY', sync: true },
+        loop: true
+      });
     } else {
       // Player lost :( – play loss music
       console.log("Player lost.");
@@ -244,6 +249,11 @@ $("#button").click(function() {
       var mymodal = $('#raceEndModal');
       mymodal.find('.modal-body').text('You lost! Choose better next time.');
       mymodal.modal('show');
+      $('.textillate').textillate({
+        in: { effect: 'rollIn' },
+        out: { effect: 'hinge', sync: true },
+        loop: true
+      });
     }
 
       button.innerHTML = "New Race";
@@ -265,9 +275,7 @@ $("#button").click(function() {
   });
 </script>
 <script>
-$('.textillate').textillate({
-  in: { effect: 'splat' },
-  out: { effect: 'foldUnfold', sync: true },
-  loop: true
-});
+// $('.modal-body').css("color", "red");
+//
+// console.log("textillating");
 </script>
