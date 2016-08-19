@@ -147,10 +147,9 @@
         </div>
 
         <div id="race" class="row" style="display: none">
-          <div id="pokeracers">
-            <img src="/img/finish_line.jpg" id="finish-line" alt="Finish Line" />
+          <div id="">
           {{#each pokemon}}
-            <div class="animate{{this.position}} up-one-pixel"><img id="plane" src="{{this.fpic}}" /></div>
+            <div class="animate{{this.position}}"><img id="plane" src="{{this.fpic}}" /></div>
           {{/each}}
           </div>
         </div>
@@ -189,12 +188,6 @@
 <script src="js/jquery.placeholder.js"></script>
 <![endif]-->
 <script src="/js/app.js"></script>
-<!-- jquery lettering -->
-<script src="/js/jquery.lettering-0.6.1.min.js"></script>
-<!-- textillate js -->
-<script src="/js/textillate.js"></script>
-<!-- textillate css -->
-<link href="/stylesheets/textillate.css" rel="stylesheet" />
 <script>
   function goRight(object, speed) {
     $(object).animate({
@@ -216,13 +209,15 @@ $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
+<<<<<<< HEAD
   var button = document.getElementById('button')
   button.disabled = true;
-  
-  
-  setTimeout(function() {
+=======
 
-  console.log("Winner Delay");
+>>>>>>> a1d5f17b103751284177d427d6c7c52955b51baf
+  setTimeout(function() {
+    console.log("Winner Delay");
+
     // Stop existing audio track(s)
     $('audio').each(function(){
       this.pause(); // Stop playing
@@ -244,12 +239,13 @@ $("#button").click(function() {
       document.getElementById('race_loss_music').play();
     }
 
-      button.innerHTML = "New Race";
-      button.disabled = false;
-      button.id = "reset";
-
   }, {{winnerDelay}});
 
+  button.innerHTML = "New Race";
+  button.disabled = false;
+  button.id = "reset";
+  button = document.getElementById('reset');
+  button.classList.remove("hasactive");
 });
 
 $("#reset").click(function(){
@@ -262,11 +258,4 @@ $("#reset").click(function(){
     document.getElementById("race").style.display = "block";
     console.log("let's race");
   });
-</script>
-<script>
-$('.textillate').textillate({
-  in: { effect: 'splat' },
-  out: { effect: 'foldUnfold', sync: true },
-  loop: true
-});
 </script>
