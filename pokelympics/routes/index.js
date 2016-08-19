@@ -21,8 +21,9 @@ router.get('/', function(req, res, next) {
     var minScore = 10000000;
     var winDel = 0;
     var winner = 0;
+    var currScore = 0;
     for (var i = 0; i < pok.length; i++) {
-      currScore = pok[i].moveSpeed1 + pok[i].moveSpeed2 + pok[i].moveSpeed3 + pok[i].moveSpeed4;
+      currScore = pok[i].totalTime;
       if (minScore > currScore) {
         minScore = currScore;
         winDel = pok[i].totalTime;
@@ -32,8 +33,25 @@ router.get('/', function(req, res, next) {
     }
     console.log(pok[winner].name);
     var winName = pok[winner].name;
+    console.log(minScore);
 
-    res.render('index', { pokemon: pok, title: 'Pokélympics', winnerDelay: winDel, winnerName: winName });
+    var losDel = 0;
+    var maxScore = 0;
+    currScore = 0;
+    var loser = 0;
+    for (var i = 0; i < pok.length; i++) {
+      currScore = pok[i].totalTime;
+      if (maxScore < currScore) {
+        console.log("test");
+        maxScore = currScore;
+        loseDel = pok[i].totalTime;
+        loser = i;
+      }
+    }
+    console.log(pok[loser].name);
+    console.log(maxScore);
+
+    res.render('index', { pokemon: pok, title: 'Pokélympics', winnerDelay: winDel, winnerName: winName, loserDelay: maxScore });
     //pokedex.toTitleCase(pok[0].name), pokeSpeed: pok[0].speed, pokeFrontPicURL: pok[0].fpic
   });
 });
