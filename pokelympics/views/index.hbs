@@ -184,13 +184,24 @@ $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
-  
+  var button = document.getElementById('button')
+  button.disabled = true;
   setTimeout(function() {
     console.log("Winner Delay");
 
     console.log("{{winnerName}}");
 
   }, {{winnerDelay}});
+
+  button.innerHTML = "New Race";
+  button.disabled = false;
+  button.id = "reset";
+  button = document.getElementById('reset');
+  button.classList.remove("hasactive");
+});
+
+$("#reset").click(function(){
+  location.reload();
 });
 </script>
 

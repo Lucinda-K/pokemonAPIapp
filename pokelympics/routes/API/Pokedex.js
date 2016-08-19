@@ -10,7 +10,7 @@ function getPokemon(cb) {
     console.log("Fetching Pokémon data...");
     pok_prom = [];
     for (var i = 0; i < 4; i++) {
-        pok_prom.push(P.getPokemonByName(Math.floor((Math.random() * 100) + 1)));
+        pok_prom.push(P.getPokemonByName(Math.floor((Math.random() * 151) + 1)));
     }
 
     Q.allSettled(pok_prom)
