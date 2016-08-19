@@ -67,22 +67,6 @@
 
         // Start race music
         document.getElementById('race_music').play();
-
-        if(race_ended) {
-          // Stop existing audio track(s)
-          $('audio').each(function(){
-            this.pause(); // Stop playing
-            this.currentTime = 0; // Reset time
-          });
-
-          if(race_won) {
-            // Play victory music
-            document.getElementById('race_win_music').play();
-          } else {
-            // Play loss music
-            document.getElementById('race_loss_music').play();
-          }
-        }
       });
     }
   </script>
@@ -129,10 +113,10 @@
     <source src="/music/race_begins.m4a" type="audio/mpeg" />
   </audio>
   <audio loop="loop" id="race_win_music">
-    <source src="/music/race_win.m4a" type="audio/mpeg" />
+    <source src="/music/race_win.mp3" type="audio/mpeg" />
   </audio>
   <audio loop="loop" id="race_loss_music">
-    <source src="/music/race_loss.m4a" type="audio/mpeg" />
+    <source src="/music/race_loss.mp3" type="audio/mpeg" />
   </audio>
 
   <div id="content-region" class="region">
@@ -225,11 +209,30 @@ $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
-  
+
   setTimeout(function() {
     console.log("Winner Delay");
 
-    console.log("{{winnerName}}");
+    // Stop existing audio track(s)
+    $('audio').each(function(){
+      this.pause(); // Stop playing
+      this.currentTime = 0; // Reset time
+    });
+
+    // Get URL hash
+    var urlHash = window.location.hash;
+    console.log("URL hash: " + urlHash);
+    var pokeNameRegex = /^#\/race\/vote\/(\w*)/g;
+    var match = pokeNameRegex.exec(urlHash);
+    if(match[1] === "{{winnerName}}") {
+      // Player chose correctly; play victory music
+      console.log("Player won!");
+      document.getElementById('race_win_music').play();
+    } else {
+      // Player lost :( – play loss music
+      console.log("Player lost.");
+      document.getElementById('race_loss_music').play();
+    }
 
   }, {{winnerDelay}});
 });
