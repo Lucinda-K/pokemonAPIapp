@@ -51,6 +51,7 @@ function getPokemon(cb) {
                             moveSpeed4: mSpeed4,
                             fpic: p.sprites.front_default,
                             bpick: p.sprites.back_default,
+                            isWinner: 0
                     }
                     console.log("stats set");
                     pok.push(stats);

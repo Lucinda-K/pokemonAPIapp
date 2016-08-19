@@ -106,9 +106,9 @@
 
             <hr />
 
-            <div class="row">
+            <div id="race-vote" class="row">
             {{#each pokemon}}
-              <a id="race-vote" href="#/race/vote/{{this.name}}" title="Bet on {{this.name}}!">
+              <a href="#/race/vote/{{this.name}}" title="Bet on {{this.name}}!">
                 <div id="tile-{{this.name}}" class="col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-1 col-xs-6 col-xs-offset-0 poketile" onclick="selectThis(this)">
                   <img src="{{this.fpic}}" />
                   <p>Species: {{this.name}}</p>
@@ -122,7 +122,7 @@
         </div>
 
         <div id="race" class="row" style="display: none">
-          <div id="race">
+          <div id="">
           {{#each pokemon}}
             <div class="animate{{this.position}}"><img id="plane" src="{{this.fpic}}" /></div>
           {{/each}}
@@ -184,6 +184,7 @@ $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
+  console.log()
 });
 </script>
 

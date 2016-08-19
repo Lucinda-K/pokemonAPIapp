@@ -15,6 +15,20 @@ router.get('/', function(req, res, next) {
     for (var i = 0; i < pok.length; i++) {
       pok[i].name = pokedex.toTitleCase(pok[i].name);
     }
+
+    // get winner
+    var minScore = 10000000;
+    var winner = 0;
+    for (var i = 0; i < pok.length; i++) {
+      currScore = pok[i].moveSpeed1 + pok[i].moveSpeed2 + pok[i].moveSpeed3 + pok[i].moveSpeed4;
+      if (minScore > currScore) {
+        minScore = currScore;
+        winner = i;
+      }
+    }
+    pok[winner].isWinner = 1;
+    console.log(pok[winner].name);
+
     res.render('index', { pokemon: pok, title: 'Pokélympics' });
     //pokedex.toTitleCase(pok[0].name), pokeSpeed: pok[0].speed, pokeFrontPicURL: pok[0].fpic
   });
@@ -33,6 +47,7 @@ console.log("RACE");
     for (var i = 0; i < pok.length; i++) {
       pok[i].name = pokedex.toTitleCase(pok[i].name);
     }
+
     res.render('index', { pokemon: pok, title: 'Pokélympics', race: true });
     //pokedex.toTitleCase(pok[0].name), pokeSpeed: pok[0].speed, pokeFrontPicURL: pok[0].fpic
   });
