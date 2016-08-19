@@ -209,13 +209,15 @@ $("#button").click(function() {
   {{#each pokemon}}
   goRight('.animate{{this.position}}', {{this.moveSpeed4}})
   {{/each}}
+<<<<<<< HEAD
   var button = document.getElementById('button')
   button.disabled = true;
-  
-  
-  setTimeout(function() {
+=======
 
-  console.log("Winner Delay");
+>>>>>>> a1d5f17b103751284177d427d6c7c52955b51baf
+  setTimeout(function() {
+    console.log("Winner Delay");
+
     // Stop existing audio track(s)
     $('audio').each(function(){
       this.pause(); // Stop playing
@@ -237,12 +239,13 @@ $("#button").click(function() {
       document.getElementById('race_loss_music').play();
     }
 
-      button.innerHTML = "New Race";
-      button.disabled = false;
-      button.id = "reset";
-
   }, {{winnerDelay}});
 
+  button.innerHTML = "New Race";
+  button.disabled = false;
+  button.id = "reset";
+  button = document.getElementById('reset');
+  button.classList.remove("hasactive");
 });
 
 $("#reset").click(function(){
