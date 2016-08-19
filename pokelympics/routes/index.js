@@ -33,6 +33,7 @@ router.get('/', function(req, res, next) {
     }
     console.log(pok[winner].name);
     var winName = pok[winner].name;
+    var winModalImage = pok[winner].fpic;
     console.log(minScore);
 
     var losDel = 0;
@@ -50,8 +51,9 @@ router.get('/', function(req, res, next) {
     }
     console.log(pok[loser].name);
     console.log(maxScore);
+    var loseModalImage = pok[loser].fpic;
 
-    res.render('index', { pokemon: pok, title: 'Pokélympics', winnerDelay: winDel, winnerName: winName, loserDelay: maxScore });
+    res.render('index', { pokemon: pok, title: 'Pokélympics', winnerDelay: winDel, winnerName: winName, loserDelay: maxScore, winModImg: winModalImage, loseModImg: loseModalImage });
     //pokedex.toTitleCase(pok[0].name), pokeSpeed: pok[0].speed, pokeFrontPicURL: pok[0].fpic
   });
 });
