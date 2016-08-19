@@ -142,7 +142,7 @@ a .poketile-selected {
   transition: background-color 200ms linear;
 }
 
-a p {
+a h5 {
   color: #333;
   -webkit-transition: background-color 200ms linear;
   -moz-transition: background-color 200ms linear;
@@ -151,7 +151,7 @@ a p {
   transition: background-color 200ms linear;
 }
 
-a:hover p {
+a:hover h5 {
   color: #FFF;
   -webkit-transition: background-color 200ms linear;
   -moz-transition: background-color 200ms linear;
